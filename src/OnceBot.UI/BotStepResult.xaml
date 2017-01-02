@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="OnceBot.UI.BotStepResult"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OnceBot.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                <Setter Property="IsReadOnly" Value="True"></Setter>
+            </Style>
+        </Grid.Resources>
+
+        <StackPanel>
+            <GroupBox Header="timing">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="started"></TextBlock>
+                    <TextBox Name="StartTimeCalView" Width="55"></TextBox>
+                    <Grid Width="16"></Grid>
+                    <TextBlock Text="duration"></TextBlock>
+                    <TextBox Name="DurationView" Width="33"></TextBox>
+                    <TextBlock Text="ms"></TextBlock>
+                </StackPanel>
+            </GroupBox>
+            <TextBox
+            Name="GeneralMessageTextBox"
+            Height="133"
+            VerticalScrollBarVisibility="Auto"></TextBox>
+
+            <GroupBox Header="pattern found in window">
+                <TextBox Name="WindowRasterSetMatchReport" Height="66"></TextBox>
+            </GroupBox>
+
+            <GroupBox
+                Header="screenshot">
+                <Button
+                    Click="WindowClientRasterWriteToFileButton_Click"
+                    AllowDrop="True"
+                    Drop="WindowClientRasterWriteToFileButton_Drop">
+                    <TextBlock Text="save to file"></TextBlock>
+                </Button>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

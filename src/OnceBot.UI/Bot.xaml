@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="OnceBot.UI.Bot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OnceBot.UI"
+             mc:Ignorable="d" 
+             d:DesignHeight="555" d:DesignWidth="444">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Expander
+                    Header="last step"
+                    IsExpanded="True">
+                    <local:BotStepResult
+                x:Name="StepLastView"></local:BotStepResult>
+                </Expander>
+                <Expander
+                    Header="last step with input enabled"
+                    IsExpanded="True">
+                    <local:BotStepResult
+                x:Name="StepMotionEnabledLastView"></local:BotStepResult>
+                </Expander>
+
+                <Button
+                    x:Name="EnableDebugToolButton"
+                    HorizontalAlignment="Right">
+                    <TextBlock Text="enable debug tool"></TextBlock>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

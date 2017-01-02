@@ -1,0 +1,18 @@
+﻿<Window x:Class="OnceBot.Exe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OnceBot.Exe"
+        xmlns:BotEngine.UI="clr-namespace:BotEngine.UI;assembly=BotEngine.UI"
+        xmlns:OnceBot.UI="clr-namespace:OnceBot.UI;assembly=OnceBot.UI"
+        mc:Ignorable="d"
+        Title="{Binding RelativeSource={RelativeSource Self}, Path=TitleComputed, FallbackValue=OnceBot vXXXX}"
+        Height="350" Width="525"
+        KeyDown="Window_KeyDown">
+    <Grid>
+        <OnceBot.UI:ExeMain
+            x:Name="MainControl">
+        </OnceBot.UI:ExeMain>
+    </Grid>
+</Window>
